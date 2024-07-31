@@ -48,7 +48,7 @@
   <pre
     style="overflow-x: auto; text-align: left; background-color: #f6f8fa"
   >
-<illumina_p5>AATGATACGGCGACCACCGAGATCTACAC</illumina_p5><probe>GGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT</probe><cdna>X</cdna><poly_A>X</poly_A><umi>NNNNNN</umi><barcode>NNNNNNNN</barcode><probe>AAGGCGTCACAAGCAATCACTC</probe><barcode>NNNNNNNN</barcode><probe>AGATCGGAAGAGCGTCGTGTAGGGAAAGAG</probe><index7>NNNNNN</index7><illumina_p7>ATCTCGTATGCCGTCTTCTGCTTG</illumina_p7></pre>
+<illumina_p5>AATGATACGGCGACCACCGAGATCTACAC</illumina_p5><custom_primer>GGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT</custom_primer><cdna>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</cdna><poly_A>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</poly_A><umi>XXXXXX</umi><barcode>NNNNNNNN</barcode><linker>AAGGCGTCACAAGCAATCACTC</linker><barcode>NNNNNNNNNNN</barcode><custom_primer>AGATCGGAAGAGCGTCGTGTAGGGAAAGAG</custom_primer><index7>NNNNNN</index7><illumina_p7>ATCTCGTATGCCGTCTTCTGCTTG</illumina_p7></pre>
     
 <ol><li>
     <details>
@@ -78,7 +78,7 @@
     </li><li><details>
     <summary>PE2</summary>
     <ul>
-      <li>region_type: probe</li>
+      <li>region_type: custom_primer</li>
       <li>sequence_type: fixed</li>
       <li>
         sequence:
@@ -90,7 +90,7 @@
         display: inline;
         "
         >
-<probe>GGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT</probe></pre
+<custom_primer>GGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT</custom_primer></pre
         >
       </li>
       <li>min_len: 36</li>
@@ -114,7 +114,7 @@
         display: inline;
         "
         >
-<cdna>X</cdna></pre
+<cdna>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</cdna></pre
         >
       </li>
       <li>min_len: 1</li>
@@ -138,7 +138,7 @@
         display: inline;
         "
         >
-<poly_A>X</poly_A></pre
+<poly_A>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</poly_A></pre
         >
       </li>
       <li>min_len: 1</li>
@@ -162,7 +162,7 @@
         display: inline;
         "
         >
-<umi>NNNNNN</umi></pre
+<umi>XXXXXX</umi></pre
         >
       </li>
       <li>min_len: 6</li>
@@ -191,14 +191,14 @@
       </li>
       <li>min_len: 8</li>
       <li>max_len: 8</li>
-      <li>onlist: bc2_onlist.txt (md5: None)</li>
+      <li>onlist: bc2_onlist.txt (md5: 4157e9ae6c16f3d3f278ba6a37ff65ce)</li>
       <li> regions: 
       </li>
   </details>
     </li><li><details>
     <summary>W1</summary>
     <ul>
-      <li>region_type: probe</li>
+      <li>region_type: linker</li>
       <li>sequence_type: fixed</li>
       <li>
         sequence:
@@ -210,7 +210,7 @@
         display: inline;
         "
         >
-<probe>AAGGCGTCACAAGCAATCACTC</probe></pre
+<linker>AAGGCGTCACAAGCAATCACTC</linker></pre
         >
       </li>
       <li>min_len: 22</li>
@@ -234,19 +234,19 @@
         display: inline;
         "
         >
-<barcode>NNNNNNNN</barcode></pre
+<barcode>NNNNNNNNNNN</barcode></pre
         >
       </li>
       <li>min_len: 8</li>
       <li>max_len: 11</li>
-      <li>onlist: bc1_onlist.txt (md5: None)</li>
+      <li>onlist: bc1_onlist.txt (md5: de74729c7cc922c3fe2217e42559e8e2)</li>
       <li> regions: 
       </li>
   </details>
     </li><li><details>
     <summary>PE1</summary>
     <ul>
-      <li>region_type: probe</li>
+      <li>region_type: custom_primer</li>
       <li>sequence_type: fixed</li>
       <li>
         sequence:
@@ -258,7 +258,7 @@
         display: inline;
         "
         >
-<probe>AGATCGGAAGAGCGTCGTGTAGGGAAAGAG</probe></pre
+<custom_primer>AGATCGGAAGAGCGTCGTGTAGGGAAAGAG</custom_primer></pre
         >
       </li>
       <li>min_len: 30</li>
@@ -287,7 +287,7 @@
       </li>
       <li>min_len: 6</li>
       <li>max_len: 6</li>
-      <li>onlist: sample_index_onlist.txt (md5: None)</li>
+      <li>onlist: sample_index_onlist.txt (md5: d41d8cd98f00b204e9800998ecf8427e)</li>
       <li> regions: 
       </li>
   </details>

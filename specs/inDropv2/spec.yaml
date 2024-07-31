@@ -12,14 +12,38 @@ library_protocol: null
 library_kit: null
 sequence_protocol: Illumina
 sequence_kit: null
-sequence_spec: []
+sequence_spec:
+- !Read
+  read_id: R1.fastq.gz
+  name: Read 1
+  modality: rna
+  primer_id: PE2
+  min_len: 1
+  max_len: 98
+  strand: pos
+- !Read
+  read_id: I1.fastq.gz
+  name: Index 1 (i7 index)
+  modality: rna
+  primer_id: PE1
+  min_len: 6
+  max_len: 6
+  strand: pos
+- !Read
+  read_id: R2.fastq.gz
+  name: Read 2
+  modality: rna
+  primer_id: PE1
+  min_len: 44
+  max_len: 51
+  strand: neg
 library_spec:
 - !Region
   region_id: rna
   region_type: rna
   name: rna
   sequence_type: joined
-  sequence: AATGATACGGCGACCACCGAGATCTACACGGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCTXXNNNNNNNNNNNNNNAAGGCGTCACAAGCAATCACTCNNNNNNNNAGATCGGAAGAGCGTCGTGTAGGGAAAGAGNNNNNNATCTCGTATGCCGTCTTCTGCTTG
+  sequence: AATGATACGGCGACCACCGAGATCTACACGGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCTXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXNNNNNNNNAAGGCGTCACAAGCAATCACTCNNNNNNNNNNNAGATCGGAAGAGCGTCGTGTAGGGAAAGAGNNNNNNATCTCGTATGCCGTCTTCTGCTTG
   min_len: 171
   max_len: 368
   onlist: null
@@ -37,7 +61,7 @@ library_spec:
     parent_id: rna
   - !Region
     region_id: PE2
-    region_type: probe
+    region_type: custom_primer
     name: PE2
     sequence_type: fixed
     sequence: GGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT
@@ -51,7 +75,7 @@ library_spec:
     region_type: cdna
     name: cdna
     sequence_type: random
-    sequence: X
+    sequence: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     min_len: 1
     max_len: 98
     onlist: null
@@ -62,7 +86,7 @@ library_spec:
     region_type: poly_A
     name: polyA
     sequence_type: random
-    sequence: X
+    sequence: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     min_len: 1
     max_len: 98
     onlist: null
@@ -73,7 +97,7 @@ library_spec:
     region_type: umi
     name: umi
     sequence_type: random
-    sequence: NNNNNN
+    sequence: XXXXXX
     min_len: 6
     max_len: 6
     onlist: null
@@ -89,13 +113,13 @@ library_spec:
     max_len: 8
     onlist: !Onlist
       filename: bc2_onlist.txt
-      md5: null
+      md5: 4157e9ae6c16f3d3f278ba6a37ff65ce
       location: local
     regions: null
     parent_id: rna
   - !Region
     region_id: W1
-    region_type: probe
+    region_type: linker
     name: W1
     sequence_type: fixed
     sequence: AAGGCGTCACAAGCAATCACTC
@@ -109,18 +133,18 @@ library_spec:
     region_type: barcode
     name: bc1
     sequence_type: onlist
-    sequence: NNNNNNNN
+    sequence: NNNNNNNNNNN
     min_len: 8
     max_len: 11
     onlist: !Onlist
       filename: bc1_onlist.txt
-      md5: null
+      md5: de74729c7cc922c3fe2217e42559e8e2
       location: local
     regions: null
     parent_id: rna
   - !Region
     region_id: PE1
-    region_type: probe
+    region_type: custom_primer
     name: PE1
     sequence_type: fixed
     sequence: AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
@@ -139,7 +163,7 @@ library_spec:
     max_len: 6
     onlist: !Onlist
       filename: sample_index_onlist.txt
-      md5: null
+      md5: d41d8cd98f00b204e9800998ecf8427e
       location: local
     regions: null
     parent_id: rna
